@@ -2,7 +2,6 @@ from flask import Blueprint, render_template, request, flash
 from flask_login import login_user, logout_user, login_required, current_user, UserMixin
 from . import db
 from .models import User
-from werkzeug.security import generate_password_hash, check_password_hash
 
 auth = Blueprint('auth', __name__)
 
@@ -13,18 +12,11 @@ def home():
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
-    data = request.form
-    print(data)
     return render_template("login.html", boolean=True)
 
 @auth.route('/signup', methods=['GET', 'POST'])
 def signup():
-    if request.method == 'POST':
-        data = request.form
-        name = request.form.get('fullname')
-        email = request.form.get('email')
-        password = request.form.get('password')
-        print(data)
+    return render_template("signup.html")
 
 @auth.route('/about')
 def about():
