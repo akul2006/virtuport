@@ -17,6 +17,9 @@ def login():
 def signup():
     if request.method == 'POST':
         data = request.form
+        name = request.form.get('fullname')
+        email = request.form.get('email')
+        password = request.form.get('password')
         print(data)
 
 @auth.route('/about')
