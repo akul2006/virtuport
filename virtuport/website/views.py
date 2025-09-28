@@ -2,11 +2,11 @@ from flask import Blueprint, render_template
 
 views = Blueprint('views', __name__)
 
-@views.route('/')
+@views.route('/login')
 def login():
     return render_template("login.html")
 
-@views.route('/home')
+@views.route('/')
 def home():
     return render_template("index.html")
 
