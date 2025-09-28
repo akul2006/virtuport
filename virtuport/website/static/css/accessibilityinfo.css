@@ -161,6 +161,19 @@
     user-select: none;
   }
 
+  ul li a {
+    color: var(--primary-dark);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-shadow: 0 0 3px var(--yellow-accent);
+  }
+
+  ul li a:hover {
+    color: var(--primary-light);
+    text-shadow: 0 0 14px var(--yellow-accent);
+  }
+
   footer {
     background: linear-gradient(90deg, var(--primary-dark), var(--primary-light));
     color: var(--text-light);

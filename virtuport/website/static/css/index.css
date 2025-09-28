@@ -46,6 +46,15 @@ nav .logo {
     text-transform: uppercase;
 }
 
+/* nav .logo_img img {
+    height: 40px;
+    width: auto;
+    margin-right: 12px;
+    vertical-align: middle;
+    padding-bottom: 0px;
+    padding: 0px;
+}    */
+
 nav ul {
     display: flex;
     list-style: none;
