@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+:root {
+    --primary-dark: #003d2c;
+    --primary-green: #00693E;
+    --primary-light: #00b87a;
+    --text-light: #fdfdfd;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-green), var(--primary-light));
+    background-size: 400% 400%;
+    animation: gradientFlow 12s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(14px);
+    padding: 50px 40px;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px var(--shadow-color);
+    width: 100%;
+    max-width: 420px;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.login-container p {
+    font-size: 1rem;
+    margin-bottom: 28px;
+    color: #e6f8f1;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.85);
+    color: #003d2c;
+}
+
+.form-group input:focus {
+    border: 2px solid var(--primary-light);
+    background: #ffffff;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    background: var(--primary-light);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 8px 18px rgba(0, 184, 122, 0.4);
+}
+
+.btn-login:hover {
+    background: #00d68f;
+    box-shadow: 0 10px 24px rgba(0, 184, 122, 0.6);
+}
+
+.login-container .signup-link {
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.login-container .signup-link a {
+    color: var(--primary-light);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-container .signup-link a:hover {
+    color: #00ffb0;
+}

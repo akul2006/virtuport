@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+:root {
+    --primary-dark: #00693E;
+    --primary-light: #F5CF47;
+    --text-light: #fffbe6;
+    --text-dark: #004225;
+    --background-light: #f9f6ef;
+    --shadow-color: rgba(0, 105, 62, 0.4);
+}
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary-light));
+    padding: 18px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1100;
+    box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+nav .logo {
+    color: var(--text-light);
+    font-weight: 800;
+    font-size: 1.9rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    user-select: none;
+    cursor: default;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fbeecfbb;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: var(--primary-light);
+    bottom: 0;
+    left: 0;
+    border-radius: 6px;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--primary-light);
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+header {
+    background: linear-gradient(135deg, rgba(0, 105, 62, 0.82), rgba(245, 207, 71, 0.6)),
+        url('https://images.unsplash.com/photo-1533743983669-94fa4a031f12?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-light);
+    font-weight: 700;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    border-bottom-left-radius: 56px;
+    border-bottom-right-radius: 56px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    user-select: none;
+    text-shadow: 0 0 24px var(--primary-light);
+    padding: 0 20px;
+}
+
+main {
+    max-width: 920px;
+    margin: -50px auto 100px;
+    background: var(--text-light);
+    padding: 60px 56px;
+    border-radius: 48px;
+    box-shadow: 0 32px 68px var(--shadow-color);
+    color: var(--text-dark);
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 26px;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 18px;
+    height: 40px;
+    background: var(--primary-light);
+    border-radius: 12px;
+}
+
+p {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    margin-bottom: 28px;
+    color: #275a42;
+}
+
+ul {
+    padding-left: 32px;
+}
+
+li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 18px;
+}
+
+li::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-light);
+    font-size: 1.4rem;
+    font-weight: 900;
+    user-select: none;
+}
+
+footer {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary-light));
+    color: var(--text-light);
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 32px 24px;
+    letter-spacing: 0.06em;
+    user-select: none;
+    border-radius: 0 0 56px 56px;
+    box-shadow: 0 -10px 26px var(--shadow-color);
+    margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+    main {
+        margin: -40px 20px 70px;
+        padding: 48px 28px;
+        border-radius: 32px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    header {
+        font-size: 2rem;
+        height: 260px;
+        letter-spacing: 1.4px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
