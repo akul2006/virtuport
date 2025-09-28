@@ -25,7 +25,7 @@ def about():
 
 @auth.route('/accessibility')
 def accessibility():
-    return render_template("accessibility.html")
+    return render_template("accessibilityinfo.html")
 
 @auth.route('/admissions')
 def admissions():
