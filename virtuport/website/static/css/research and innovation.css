@@ -141,6 +141,7 @@ p {
 
 ul {
     padding-left: 32px;
+    list-style: none;
 }
 
 li {
