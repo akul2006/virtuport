@@ -2,24 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>VirtuPort - Empowering Skills for Tomorrow</title>
+    <title>{% block title %}VirtuPort{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% block head %}
     <link rel="stylesheet" href="../static/css/Home.css" />
+    {% endblock %}
   </head>
 
   <body>
     <nav role="navigation" aria-label="Primary navigation">
       <div class="logo">VirtuPort</div>
       <ul>
-        <li><a href="../templates/Home.html" class="active"
+        <li><a href="{{ url_for('auth.home') }}" class="active"
             aria-current="page">Home</a></li>
-        <li><a href="../templates/about.html">About</a></li>
-        <li><a href="../templates/programs.html">Programs</a></li>
-        <li><a href="../templates/admissions.html">Admissions</a></li>
-        <li><a href="../templates/contact.html">Contact</a></li>
+        <li><a href="{{ url_for('auth.about') }}">About</a></li>
+        <li><a href="{{ url_for('auth.programs') }}">Programs</a></li>
+        <li><a href="{{ url_for('auth.admissions') }}">Admissions</a></li>
+        <li><a href="{{ url_for('auth.contact') }}">Contact</a></li>
       </ul>
     </nav>
 
+    {% block content %}
     <section class="hero" aria-label="Homepage Hero Section">
       <div class="hero-text">
         <h1>Empowering Skills for a Brighter Tomorrow</h1>
@@ -90,6 +93,7 @@
         </article>
       </section>
     </main>
+    {% endblock %}
 
     <footer role="contentinfo">
       &copy; 2025 VirtuPort. All rights reserved.
