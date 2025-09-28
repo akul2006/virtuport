@@ -1,145 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Admissions 2025 | VirtuPort (VirtuPort)</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../static/css/admissions.css" />
-  </head>
+{% extends "index.html" %}
+{% block title %}Admissions{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="../static/css/admissions.css" />
+{% endblock %}
 
-  <body>
-    <nav role="navigation" aria-label="Primary navigation">
-      <div class="logo">VirtuPort</div>
-      <ul>
-        <li><a href="index.html" tabindex="0">Home</a></li>
-        <li><a href="about.html" tabindex="0">About</a></li>
-        <li><a href="programs.html" tabindex="0">Programs</a></li>
-        <li><a href="admissions.html" class="active" aria-current="page"
-            tabindex="0">Admissions</a></li>
-        <li><a href="contact.html" tabindex="0">Contact</a></li>
-      </ul>
-    </nav>
+{% block content %}
+<header>
+  <h1>Admissions 2025</h1>
+  <p>Your gateway to skill-based education and career readiness at
+    VirtuPort</p>
+</header>
 
-    <header>
-      <h1>Admissions 2025</h1>
-      <p>Your gateway to skill-based education and career readiness at
-        VirtuPort</p>
-    </header>
+<main>
+  <section>
+    <h2>How to Apply</h2>
+    <p>Follow these streamlined steps for a fast and secure online
+      application process:</p>
+    <ul>
+      <li>Create an account on VirtuPort's official admissions portal</li>
+      <li>Complete the application form with accurate personal and
+        educational details</li>
+      <li>Upload necessary academic certificates and photographs</li>
+      <li>Pay the application fee (₹1200 for general category, ₹600 for
+        reserved categories)</li>
+      <li>Submit the application and track the status via your portal
+        dashboard</li>
+    </ul>
+  </section>
 
-    <main>
-      <section>
-        <h2>How to Apply</h2>
-        <p>Follow these streamlined steps for a fast and secure online
-          application process:</p>
-        <ul>
-          <li>Create an account on VirtuPort's official admissions portal</li>
-          <li>Complete the application form with accurate personal and
-            educational details</li>
-          <li>Upload necessary academic certificates and photographs</li>
-          <li>Pay the application fee (₹1200 for general category, ₹600 for
-            reserved categories)</li>
-          <li>Submit the application and track the status via your portal
-            dashboard</li>
-        </ul>
-      </section>
+  <section>
+    <h2>Entrance Exams Accepted</h2>
+    <ul>
+      <li>CUET – Undergraduate and Postgraduate Courses</li>
+      <li>MHT-CET – Maharashtra Common Entrance Test</li>
+      <li>GATE – For M.Tech and Research Programs</li>
+      <li>VirtuPort MUET – VirtuPort University Entrance Test</li>
+      <li>CAT – MBA and PGDM Programs</li>
+      <li>Other specified entrance exams as per program requirements</li>
+    </ul>
+  </section>
 
-      <section>
-        <h2>Entrance Exams Accepted</h2>
-        <ul>
-          <li>CUET – Undergraduate and Postgraduate Courses</li>
-          <li>MHT-CET – Maharashtra Common Entrance Test</li>
-          <li>GATE – For M.Tech and Research Programs</li>
-          <li>VirtuPort MUET – VirtuPort University Entrance Test</li>
-          <li>CAT – MBA and PGDM Programs</li>
-          <li>Other specified entrance exams as per program requirements</li>
-        </ul>
-      </section>
+  <section>
+    <h2>Eligibility Criteria</h2>
+    <table role="grid" aria-label="Eligibility Criteria Table">
+      <thead>
+        <tr>
+          <th>Program Level</th>
+          <th>Eligibility</th>
+          <th>Minimum Marks</th>
+          <th>Required Documents</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Undergraduate Programs</td>
+          <td>10+2 or equivalent with relevant stream</td>
+          <td>45% (General Category) / 40% (Reserved Categories)</td>
+          <td>Academic Marksheet, ID Proof, Passport Photo</td>
+        </tr>
+        <tr>
+          <td>Postgraduate Programs</td>
+          <td>Relevant Bachelor's Degree</td>
+          <td>Minimum 50%</td>
+          <td>Degree Certificate, Marksheet, ID Proof</td>
+        </tr>
+        <tr>
+          <td>Diploma & Certificate courses</td>
+          <td>Class 10 or 12 depending on the course</td>
+          <td>Varies by Course</td>
+          <td>Academic Certificates & ID Proof</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-      <section>
-        <h2>Eligibility Criteria</h2>
-        <table role="grid" aria-label="Eligibility Criteria Table">
-          <thead>
-            <tr>
-              <th>Program Level</th>
-              <th>Eligibility</th>
-              <th>Minimum Marks</th>
-              <th>Required Documents</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Undergraduate Programs</td>
-              <td>10+2 or equivalent with relevant stream</td>
-              <td>45% (General Category) / 40% (Reserved Categories)</td>
-              <td>Academic Marksheet, ID Proof, Passport Photo</td>
-            </tr>
-            <tr>
-              <td>Postgraduate Programs</td>
-              <td>Relevant Bachelor's Degree</td>
-              <td>Minimum 50%</td>
-              <td>Degree Certificate, Marksheet, ID Proof</td>
-            </tr>
-            <tr>
-              <td>Diploma & Certificate courses</td>
-              <td>Class 10 or 12 depending on the course</td>
-              <td>Varies by Course</td>
-              <td>Academic Certificates & ID Proof</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+  <section>
+    <h2>Important Dates</h2>
+    <table role="grid" aria-label="Important Admission Dates Table">
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Admission Portal Opens</td>
+          <td>March 1, 2025</td>
+        </tr>
+        <tr>
+          <td>Application Deadline</td>
+          <td>June 15, 2025</td>
+        </tr>
+        <tr>
+          <td>Entrance Exam Schedule</td>
+          <td>May – July 2025</td>
+        </tr>
+        <tr>
+          <td>Interview & Counseling</td>
+          <td>July – August 2025</td>
+        </tr>
+        <tr>
+          <td>Final Admission List</td>
+          <td>August 2025</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-      <section>
-        <h2>Important Dates</h2>
-        <table role="grid" aria-label="Important Admission Dates Table">
-          <thead>
-            <tr>
-              <th>Event</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Admission Portal Opens</td>
-              <td>March 1, 2025</td>
-            </tr>
-            <tr>
-              <td>Application Deadline</td>
-              <td>June 15, 2025</td>
-            </tr>
-            <tr>
-              <td>Entrance Exam Schedule</td>
-              <td>May – July 2025</td>
-            </tr>
-            <tr>
-              <td>Interview & Counseling</td>
-              <td>July – August 2025</td>
-            </tr>
-            <tr>
-              <td>Final Admission List</td>
-              <td>August 2025</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section>
-        <h2>Contact Admission Office</h2>
-        <p>For any admission-related queries or support reach out to us:</p>
-        <ul>
-          <li>Email: <a
-              href="mailto:admissions@VirtuPort.ac.in">admissions@VirtuPort.ac.in</a></li>
-          <li>Phone: +91-22-1234-5678</li>
-          <li>Or visit the <a href="https://VirtuPort.ac.in/admissions-2/"
-              target="_blank" rel="noopener">Official VirtuPort Admissions
-              Page</a></li>
-        </ul>
-      </section>
-    </main>
-
-    <footer>
-      &copy; 2025 VirtuPort. All rights reserved.
-    </footer>
-
-  </body>
-</html>
+  <section>
+    <h2>Contact Admission Office</h2>
+    <p>For any admission-related queries or support reach out to us:</p>
+    <ul>
+      <li>Email: <a
+          href="mailto:admissions@VirtuPort.ac.in">admissions@VirtuPort.ac.in</a></li>
+      <li>Phone: +91-22-1234-5678</li>
+      <li>Or visit the <a href="https://VirtuPort.ac.in/admissions-2/"
+          target="_blank" rel="noopener">Official VirtuPort Admissions
+          Page</a></li>
+    </ul>
+  </section>
+</main>
+{% endblock %}

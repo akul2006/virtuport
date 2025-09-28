@@ -5,7 +5,7 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/home')
 def home():
-    return render_template("Home.html")
+    return render_template("index.html")
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
@@ -46,10 +46,6 @@ def faculty_resources():
 @auth.route('/curriculum')
 def curriculum():
     return render_template("Hands-on Curriculum.html")
-
-@auth.route('/index')
-def index():
-    return render_template("index.html")
 
 @auth.route('/industry_partnership')
 def industry_partnership():

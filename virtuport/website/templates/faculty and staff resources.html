@@ -1,56 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Faculty & Staff Resources | VirtuPort</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../static/css/accessibilityinfo.css" />
-  </head>
+{% extends "index.html" %}
+{% block title %}Faculty & Staff Resources{% endblock %}
 
-  <body>
-    <nav>
-      <div class="logo">VirtuPort</div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="programs.html">Programs</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+{% block head %}
+<link rel="stylesheet" href="../static/css/accessibilityinfo.css" />
+{% endblock %}
 
-    <header>
-      Faculty & Staff Resources at VirtuPort
-    </header>
+{% block content %}
+<header>
+  Faculty & Staff Resources at VirtuPort
+</header>
 
-    <main>
-      <section>
-        <h2>Overview</h2>
-        <p>
-          VirtuPort supports faculty and staff with resources and programs that
-          promote professional development, research excellence, and a
-          collaborative academic environment.
-        </p>
-      </section>
+<main>
+  <section>
+    <h2>Overview</h2>
+    <p>
+      VirtuPort supports faculty and staff with resources and programs that
+      promote professional development, research excellence, and a
+      collaborative academic environment.
+    </p>
+  </section>
 
-      <section>
-        <h2>Available Resources</h2>
-        <ul>
-          <li>Access to teaching materials and faculty handbooks.</li>
-          <li>Professional development workshops and training programs.</li>
-          <li>Research grants and collaborative project support.</li>
-          <li>Human resource services including policies and benefits
-            guidance.</li>
-          <li>Digital teaching tools and advanced laboratory access.</li>
-          <li>Mentorship programs and leadership development.</li>
-          <li>Faculty forums to share innovations and best practices.</li>
-          <li>Health and wellness resources for staff support.</li>
-        </ul>
-      </section>
-    </main>
-
-    <footer>
-      &copy; 2025 VirtuPort. All rights reserved.
-    </footer>
-  </body>
-</html>
+  <section>
+    <h2>Available Resources</h2>
+    <ul>
+      <li>Access to teaching materials and faculty handbooks.</li>
+      <li>Professional development workshops and training programs.</li>
+      <li>Research grants and collaborative project support.</li>
+      <li>Human resource services including policies and benefits
+        guidance.</li>
+      <li>Digital teaching tools and advanced laboratory access.</li>
+      <li>Mentorship programs and leadership development.</li>
+      <li>Faculty forums to share innovations and best practices.</li>
+      <li>Health and wellness resources for staff support.</li>
+    </ul>
+  </section>
+</main>
+{% endblock %}

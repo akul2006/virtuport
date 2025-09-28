@@ -1,60 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Student Resources | VirtuPort</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../static/css/accessibilityinfo.css" />
-  </head>
+{% extends "index.html" %}
+{% block title %}Student Resources{% endblock %}
 
-  <body>
-    <nav>
-      <div class="logo">VirtuPort</div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="programs.html">Programs</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+{% block head %}
+<link rel="stylesheet" href="../static/css/accessibilityinfo.css" />
+{% endblock %}
 
-    <header>
-      Student Resources at VirtuPort
-    </header>
+{% block content %}
+<header>
+  Student Resources at VirtuPort
+</header>
 
-    <main>
-      <section>
-        <h2>Overview</h2>
-        <p>
-          VirtuPort provides comprehensive support to students through a variety
-          of academic and personal resources aimed at enhancing their
-          educational experience and career prospects.
-        </p>
-      </section>
+<main>
+  <section>
+    <h2>Overview</h2>
+    <p>
+      VirtuPort provides comprehensive support to students through a variety
+      of academic and personal resources aimed at enhancing their
+      educational experience and career prospects.
+    </p>
+  </section>
 
-      <section>
-        <h2>Available Student Resources</h2>
-        <ul>
-          <li>Course materials, lecture notes, and recorded classes accessible
-            online.</li>
-          <li>Academic calendar with key dates and deadlines.</li>
-          <li>Personalized academic counseling and tutoring services.</li>
-          <li>Career guidance, placement, and internship assistance.</li>
-          <li>Workshops on soft skills, communication, and interview
-            preparation.</li>
-          <li>Access to digital library and research databases.</li>
-          <li>Student clubs, events, and cultural programs to encourage holistic
-            growth.</li>
-          <li>Health and wellness programs including counseling support.</li>
-          <li>Facilities and support for differently-abled students.</li>
-        </ul>
-      </section>
+  <section>
+    <h2>Available Student Resources</h2>
+    <ul>
+      <li>Course materials, lecture notes, and recorded classes accessible
+        online.</li>
+      <li>Academic calendar with key dates and deadlines.</li>
+      <li>Personalized academic counseling and tutoring services.</li>
+      <li>Career guidance, placement, and internship assistance.</li>
+      <li>Workshops on soft skills, communication, and interview
+        preparation.</li>
+      <li>Access to digital library and research databases.</li>
+      <li>Student clubs, events, and cultural programs to encourage holistic
+        growth.</li>
+      <li>Health and wellness programs including counseling support.</li>
+      <li>Facilities and support for differently-abled students.</li>
+    </ul>
+  </section>
 
-    </main>
-
-    <footer>
-      &copy; 2025 VirtuPort. All rights reserved.
-    </footer>
-  </body>
-</html>
+</main>
+{% endblock %}

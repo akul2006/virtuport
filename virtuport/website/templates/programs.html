@@ -1,119 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Academic Programs | VirtuPort</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../static/css/accessibilityinfo.css" />
-  </head>
+{% extends "index.html" %}
+{% block title %}Academic Programs{% endblock %}
 
-  <body>
-    <nav role="navigation" aria-label="Primary navigation">
-      <div class="logo">VirtuPort</div>
-      <ul>
-        <li><a href="index.html" tabindex="0">Home</a></li>
-        <li><a href="about.html" tabindex="0">About</a></li>
-        <li><a href="programs.html" class="active" aria-current="page"
-            tabindex="0">Programs</a></li>
-        <li><a href="admissions.html" tabindex="0">Admissions</a></li>
-        <li><a href="contact.html" tabindex="0">Contact</a></li>
-      </ul>
-    </nav>
-    <header>
-      <h1>Academic Programs and Schools at VirtuPort</h1>
-    </header>
-    <main>
-      <section>
-        <h2>Schools & Departments</h2>
+{% block head %}
+<link rel="stylesheet" href="../static/css/accessibilityinfo.css" />
+{% endblock %}
+
+{% block content %}
+<header>
+  <h1>Academic Programs and Schools at VirtuPort</h1>
+</header>
+<main>
+  <section>
+    <h2>Schools & Departments</h2>
+    <ul>
+      <li><strong>School of Engineering and Technology</strong>
         <ul>
-          <li><strong>School of Engineering and Technology</strong>
-            <ul>
-              <li>Construction Technology & Management</li>
-              <li>Information Technology</li>
-              <li>Mechatronics Engineering</li>
-              <li>Cyber Security</li>
-              <li>Artificial Intelligence & Machine Learning</li>
-              <li>Cloud Computing & DevOps</li>
-            </ul>
-          </li>
-          <li><strong>School of Business and Management Studies</strong>
-            <ul>
-              <li>Business Analytics</li>
-              <li>Digital Marketing</li>
-              <li>Retail Management</li>
-              <li>Hospitality & Tourism</li>
-              <li>Banking & Financial Services</li>
-              <li>Innovation & New Venture Management</li>
-            </ul>
-          </li>
-          <li><strong>School of Humanities and Social Sciences</strong>
-            <ul>
-              <li>Economics</li>
-              <li>Psychology and Counseling</li>
-              <li>Language and Communication Skills</li>
-            </ul>
-          </li>
-          <li><strong>School of Vocational & Skill Development</strong>
-            <ul>
-              <li>Healthcare & Hospital Management</li>
-              <li>Digital Media and Broadcasting</li>
-              <li>Foreign Languages: German, Japanese, Hebrew</li>
-              <li>Construction & Infrastructure Skills</li>
-            </ul>
-          </li>
+          <li>Construction Technology & Management</li>
+          <li>Information Technology</li>
+          <li>Mechatronics Engineering</li>
+          <li>Cyber Security</li>
+          <li>Artificial Intelligence & Machine Learning</li>
+          <li>Cloud Computing & DevOps</li>
         </ul>
-      </section>
-      <section>
-        <h2>Program Highlights</h2>
-        <table role="grid" aria-label="Program Highlights Table">
-          <thead>
-            <tr>
-              <th>Program</th>
-              <th>Department/School</th>
-              <th>Duration</th>
-              <th>Key Features</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>B.Tech</td>
-              <td>Engineering & Technology</td>
-              <td>4 Years</td>
-              <td>Industry-aligned curriculum, 60% practical training,
-                internships</td>
-            </tr>
-            <tr>
-              <td>M.Tech</td>
-              <td>Engineering & Technology</td>
-              <td>2 Years</td>
-              <td>Specializations in AI, Cybersecurity, Construction
-                Technology</td>
-            </tr>
-            <tr>
-              <td>BBA / MBA</td>
-              <td>Business & Management</td>
-              <td>3-4 Years / 2 Years</td>
-              <td>Business analytics, marketing, real-world projects</td>
-            </tr>
-            <tr>
-              <td>B.A. / M.A.</td>
-              <td>Humanities & Social Sciences</td>
-              <td>3-4 Years / 2 Years</td>
-              <td>Focus on psychology, economics, counseling skills</td>
-            </tr>
-            <tr>
-              <td>Diploma / Certificate</td>
-              <td>Vocational & Skills Development</td>
-              <td>Varies from 6 months to 1 Year</td>
-              <td>Hands-on training, skill enhancement, language
-                proficiency</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </main>
-    <footer>
-      &copy; 2025 VirtuPort. All rights reserved.
-    </footer>
-  </body>
-</html>
+      </li>
+      <li><strong>School of Business and Management Studies</strong>
+        <ul>
+          <li>Business Analytics</li>
+          <li>Digital Marketing</li>
+          <li>Retail Management</li>
+          <li>Hospitality & Tourism</li>
+          <li>Banking & Financial Services</li>
+          <li>Innovation & New Venture Management</li>
+        </ul>
+      </li>
+      <li><strong>School of Humanities and Social Sciences</strong>
+        <ul>
+          <li>Economics</li>
+          <li>Psychology and Counseling</li>
+          <li>Language and Communication Skills</li>
+        </ul>
+      </li>
+      <li><strong>School of Vocational & Skill Development</strong>
+        <ul>
+          <li>Healthcare & Hospital Management</li>
+          <li>Digital Media and Broadcasting</li>
+          <li>Foreign Languages: German, Japanese, Hebrew</li>
+          <li>Construction & Infrastructure Skills</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>Program Highlights</h2>
+    <table role="grid" aria-label="Program Highlights Table">
+      <thead>
+        <tr>
+          <th>Program</th>
+          <th>Department/School</th>
+          <th>Duration</th>
+          <th>Key Features</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>B.Tech</td>
+          <td>Engineering & Technology</td>
+          <td>4 Years</td>
+          <td>Industry-aligned curriculum, 60% practical training,
+            internships</td>
+        </tr>
+        <tr>
+          <td>M.Tech</td>
+          <td>Engineering & Technology</td>
+          <td>2 Years</td>
+          <td>Specializations in AI, Cybersecurity, Construction
+            Technology</td>
+        </tr>
+        <tr>
+          <td>BBA / MBA</td>
+          <td>Business & Management</td>
+          <td>3-4 Years / 2 Years</td>
+          <td>Business analytics, marketing, real-world projects</td>
+        </tr>
+        <tr>
+          <td>B.A. / M.A.</td>
+          <td>Humanities & Social Sciences</td>
+          <td>3-4 Years / 2 Years</td>
+          <td>Focus on psychology, economics, counseling skills</td>
+        </tr>
+        <tr>
+          <td>Diploma / Certificate</td>
+          <td>Vocational & Skills Development</td>
+          <td>Varies from 6 months to 1 Year</td>
+          <td>Hands-on training, skill enhancement, language
+            proficiency</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+{% endblock %}
