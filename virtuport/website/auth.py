@@ -23,7 +23,7 @@ def signup():
 def about():
     return render_template("about.html")
 
-@auth.route('accessibility')
+@auth.route('/accessibility')
 def accessibility():
     return render_template("accessibility.html")
 
