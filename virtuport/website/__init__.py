@@ -1,11 +1,15 @@
+import os
 from flask import Flask
 from .models import db
+from flask_login import LoginManager
 
 
 def create_app():
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = 'moto'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:akul@localhost:5432/akul'
+    
+    # Configuration: Prioritize environment variables, with fallbacks for local development
+    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'moto')
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'postgresql://postgres:akul@localhost:5432/akul')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     db.init_app(app)  # Link the db object to your app
