@@ -23,9 +23,9 @@
         </div>
         <button type="submit" class="btn-login">Login</button>
       </form>
-      <div class="signup-link">
+      <!-- <div class="signup-link">
         Don’t have an account? <a href="{{ url_for('auth.signup')}}">Sign up here</a>
-      </div>
+      </div> -->
       {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
           <div class="flash-messages">
