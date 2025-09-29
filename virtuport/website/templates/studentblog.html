@@ -1,0 +1,51 @@
+{% extends "index.html" %}
+{% block title %}Student Blogs & Complaints{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="../static/css/studentblog.css">
+{% endblock %}
+
+{% block content %} 
+<header>
+  Student Blogs & Complaints
+</header>
+<main>
+  <section class="posts" aria-label="Student blog and complaint posts">
+    <h2>Recent Posts</h2>
+    <article class="post">
+      <h3 class="post-title">My Journey at MSSU</h3>
+      <p class="post-meta">Story by Ananya Deshpande - September 1, 2025</p>
+      <p class="post-content">Studying here has been exciting! The hands-on projects really prepared me for real-world challenges...</p>
+    </article>
+    <article class="post">
+      <h3 class="post-title">Concern About Classroom Facilities</h3>
+      <p class="post-meta">Complaint by Ravi Joshi - September 10, 2025</p>
+      <p class="post-content">The AC in room 101 is not working, making it uncomfortable during the afternoons. Request maintenance kindly.</p>
+    </article>
+    <article class="post">
+      <h3 class="post-title">Tips for Managing Time Effectively</h3>
+      <p class="post-meta">Story by Priya Kulkarni - September 15, 2025</p>
+      <p class="post-content">Balancing studies and extracurriculars can be tough. Here are some time management tips that helped me...</p>
+    </article>
+  </section>
+  
+  <section class="submit-section" aria-label="Submit blog or complaint form">
+    <h2>Share Your Story or Complaint</h2>
+    <form>
+      <label for="post-type">Post type</label>
+      <select id="post-type" name="post-type" required>
+        <option value="" disabled selected>Select type</option>
+        <option value="Story">Story</option>
+        <option value="Complaint">Complaint</option>
+      </select>
+      
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" maxlength="150" required />
+      
+      <label for="post-content">Your content</label>
+      <textarea id="post-content" name="post-content" maxlength="3000" required></textarea>
+      
+      <button type="submit" disabled title="Requires backend implementation">Submit</button>
+    </form>
+  </section>
+</main>
+{% endblock %}

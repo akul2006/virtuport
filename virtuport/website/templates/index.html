@@ -30,7 +30,8 @@
         <h1>Empowering Skills for a Brighter Tomorrow</h1>
         <p>Join VirtuPort to experience industry-aligned education that prepares
           you for the future of work and innovation.</p>
-        <a href="{{ url_for('auth.admissions') }}" class="btn-primary" role="button"
+        <a href="{{ url_for('auth.admissions') }}" class="btn-primary"
+          role="button"
           aria-label="Apply Now to VirtuPort Admissions 2025">Apply Now</a>
       </div>
       <div class="hero-image" aria-hidden="true">
@@ -68,6 +69,15 @@
             platforms for flexible study.</p>
         </a>
       </article>
+      <article class="feature-card">
+        <a href="{{ url_for('auth.studentblog) }}"
+          aria-label="Go to Student Blog and Complaints">
+          <div class="feature-icon" aria-hidden="true">🔬</div>
+          <h3 class="feature-title">Student Blog and Complaints</h3>
+          <p
+            class="feature-desc">"Where every student’s story is heard and every concern matters.".</p>
+        </a>
+      </article>
     </section>
 
     <main>
@@ -97,7 +107,8 @@
           </a>
         </article>
         <article class="resource-card">
-          <a href="{{ url_for('auth.news_events') }}" aria-label="Go to News & Events page">
+          <a href="{{ url_for('auth.news_events') }}"
+            aria-label="Go to News & Events page">
             <h3>News & Events</h3>
             <p>Stay updated with the latest university news, upcoming seminars,
               workshops, and community events.</p>

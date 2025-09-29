@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+:root {
+    --primary-dark: #00693E;
+    --primary-light: #F5CF47;
+    --text-light: #fffbe6;
+    --text-dark: #004225;
+    --background-light: #f9f6ef;
+    --shadow-color: rgba(0, 105, 62, 0.4);
+}
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+    color: var(--text-light);
+    padding: 2rem 1rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    user-select: none;
+    letter-spacing: 1px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.posts,
+.submit-section {
+    background: var(--text-light);
+    border-radius: 24px;
+    box-shadow: 0 12px 32px var(--shadow-color);
+    padding: 1.5rem 2rem;
+    flex: 1 1 440px;
+    display: flex;
+    flex-direction: column;
+}
+
+.posts h2,
+.submit-section h2 {
+    color: var(--primary-dark);
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+}
+
+article.post {
+    border-bottom: 1px solid #d6e1cf;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+article.post:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.post-title {
+    font-weight: 700;
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.post-meta {
+    font-style: italic;
+    color: #3a5a3c;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-content {
+    font-size: 1rem;
+    color: #2a6b5a;
+}
+
+form label {
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+form input[type="text"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    border: 1px solid #a3c4a5;
+    resize: vertical;
+}
+
+form textarea {
+    height: 140px;
+}
+
+form button {
+    margin-top: 1.5rem;
+    padding: 15px 32px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 32px;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+}
+
+@media (max-width: 960px) {
+    main {
+        flex-direction: column;
+        max-width: 600px;
+    }
+}

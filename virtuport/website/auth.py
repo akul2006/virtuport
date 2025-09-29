@@ -69,3 +69,7 @@ def social_media():
 @auth.route('/student_resources')
 def student_resources():
     return render_template("Student Resources.html")
+
+@auth.route('/studentblog', methods=['GET', 'POST'])
+def studentblog():
+    return render_template("studentblog.html")
