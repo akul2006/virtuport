@@ -1,7 +1,5 @@
 from flask import Blueprint, render_template, request, flash
 from flask_login import login_user, logout_user, login_required, current_user, UserMixin
-from . import db
-from .models import User
 
 auth = Blueprint('auth', __name__)
 
@@ -66,10 +64,10 @@ def research():
 def social_media():
     return render_template("social media integration.html")
 
+@auth.route('/studentblog')
+def studentblog():
+    return render_template("studentblog.html")
+
 @auth.route('/student_resources')
 def student_resources():
     return render_template("Student Resources.html")
-
-@auth.route('/studentblog', methods=['GET', 'POST'])
-def studentblog():
-    return render_template("studentblog.html")
