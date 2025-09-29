@@ -1,2 +1,6 @@
 Flask
-reportlab
+Flask-SQLAlchemy
+psycopg2-binary
+Flask-Login
+werkzeug
+SQLAlchemy
