@@ -7,12 +7,11 @@ from flask_login import LoginManager
 def create_app():
     app = Flask(__name__)
     
-    # Configuration: Prioritize environment variables, with fallbacks for local development
     app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'moto')
     app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'postgresql://postgres:akul@localhost:5432/akul')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-    db.init_app(app)  # Link the db object to your app
+    db.init_app(app)
 
     from .views import views
     from .auth import auth
