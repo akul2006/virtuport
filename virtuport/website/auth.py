@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
-from .models import User, db
+from .models import User, db, ContactSubmission # Import ContactSubmission
 
 auth = Blueprint('auth', __name__)
 
@@ -38,8 +38,22 @@ def accessibility():
 def admissions():
     return render_template("admissions.html")
 
-@auth.route('/contact')
+@auth.route('/contact', methods=['GET', 'POST']) # Allow POST requests
 def contact():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        email = request.form.get('email')
+        message = request.form.get('message')
+
+        if name and email and message:
+            new_submission = ContactSubmission(name=name, email=email, message=message)
+            db.session.add(new_submission)
+            db.session.commit()
+            flash('Your message has been sent successfully!', category='success')
+            return redirect(url_for('auth.contact'))
+        else:
+            flash('Please fill out all fields.', category='error')
+
     return render_template("contact.html")
 
 @auth.route('/digital_learning')

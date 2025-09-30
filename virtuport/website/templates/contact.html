@@ -25,7 +25,16 @@
   </section>
   <section>
     <h2>Send Us a Message</h2>
-    <form action="#" method="post" aria-label="Contact Form">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-messages">
+        {% for category, message in messages %}
+          <p class="flash {{ category }}">{{ message }}</p>
+        {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+    <form action="{{ url_for('auth.contact') }}" method="POST" aria-label="Contact Form">
       <label for="name">Name:</label><br />
       <input id="name" name="name" type="text" required aria-required="true"
         style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 8px; border: 1px solid var(--primary-light);" /><br />
